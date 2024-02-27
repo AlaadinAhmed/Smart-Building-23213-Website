@@ -28,7 +28,23 @@ ul{
         padding-left:5vw;
         text-align:center;
         line-height:normal;
+        a:hover{
+            color:#5c0099;
+        }
+        a{
+            cursor:pointer;
+        }
     }
+}
+.navigation a {
+  text-decoration: none; /* Remove default underline */
+}
+
+.navigation a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  text-underline-position: under; /* Specify underline position */
+  text-decoration-thickness: 3px; /* Set underline thickness */
+
 }
 nav{
     font-family: "Rubik", sans-serif;
@@ -38,12 +54,15 @@ nav{
     align-items:center;
     gap: 5vw;
     button{
+        cursor:pointer;
+        position:absolute;
+        right:0;
+        margin-right:5vw;
         font-family:inherit;
         border:none;
         background-color:#3d0066;
-        width: 7vw;
-        height:4vh;
-        border-radius:8%;
+        width: 5vw;
+        height:3.5vh;
         color:white;
         &:hover{
             background-color: #5c0099;
