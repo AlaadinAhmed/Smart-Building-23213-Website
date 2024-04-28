@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
@@ -12,25 +13,42 @@
 </head>
 <body>
     <main>
-        <nav>
-            <h1><a href='#home'>Intellisafe Living</a></h1>
-            <ul>
-                <a href="#Home"><li>
-                    Home
-                </li></a>
-                <a href="#Download"><li>
-                    Download
-                </li></a>
-                <a href="#About"><li>
-                    About
-                </li></a>
-            </ul>
-        </nav>
+        <header>
+
+            <nav>
+                <h2><a href='index.html'>Intellisafe Living</a></h2>
+                <ul>
+                    <a href="index.html"><li>
+                        Home
+                    </li></a>
+                    <a href="download.html"><li>
+                        Download
+                    </li></a>
+                    <a href="#About"><li>
+                        About
+                    </li></a>
+                </ul>
+                <i class="icon fa-solid fa-bars"></i>
+            </nav>
+            <div class="dropmenu">
+                <ul>
+                    <a href="index.html"><li>
+                        Home
+                    </li></a>
+                    <a href="download.html"><li>
+                        Download
+                    </li></a>
+                    <a href="#About"><li>
+                        About
+                    </li></a>
+                </ul>
+            </div>
+        </header>
         <section class="part" id="s1">
             <article>
-                <h1>
+                <h2>
                     We Built A Smart House That Is <span>Energy Efficient.</span>
-                </h1>
+                </h2>
                 <p>
                     Our Team aims to build a smart and innovative building that is strong, and relieble using recycled and available materials, with a lot of cool features...
                 </p>
@@ -40,18 +58,22 @@
         </section>
         <section class="part" id="s3">
             <article>
-            <h1><span>Prototype</span>Conceptualization</h1>
-            <p>Welcome to the Prototype Conceptualization section of our smart home project, where innovation meets sustainability and security. In this phase of development, we delve into the intricate designs and meticulous planning that form the backbone of our vision for an energy-efficient and secure living environment. With a steadfast commitment to harmonizing cutting-edge technology with environmental consciousness, our team has embarked on a journey to redefine modern living. Through a series of iterative sketches, blueprints, and design concepts, we aim to materialize a home that not only adapts to the dynamic needs of its inhabitants but also prioritizes resource efficiency and safeguards against potential threats. Join us as we explore the evolution of our prototype, each stroke and detail reflecting our dedication to crafting a smarter, safer, and more sustainable future.</p>
+            <h2><span>Prototype</span> Conceptualization</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia necessitatibus voluptates adipisci dolorem deserunt hic ea laudantium, tenetur ex nihil quae quod eveniet dicta magnam maiores modi veritatis delectus at.</p>
         </article>
             <img class="fig" src="assets/Top View.png">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa corporis placeat voluptatum perferendis quidem nostrum dicta deleniti, ipsum similique unde veritatis in voluptate autem aliquam repellat aut quia iure?</p>
-            <img src="assets/Side View.png" class="fig">
+            <img src="assets/Side View.png" id="f1" class="fig">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa corporis placeat voluptatum perferendis quidem nostrum dicta deleniti, ipsum similique unde veritatis in voluptate autem aliquam repellat aut quia iure?</p>
+            <img src="assets/Home Fluid Dynamics Contours Top Cropped.png" id="f2" class="fig">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime culpa corporis placeat voluptatum perferendis quidem nostrum dicta deleniti, ipsum similique unde veritatis in voluptate autem aliquam repellat aut quia iure?</p>
+            <img src="assets/Home Fluid Dynamics Contours Roof Cropped.png" id="f3" class="fig">
         </section>
         <section class="part" id="s2">
-            <h1><span>Meet</span> Our Team</h1>
+            <h2><span>Meet</span> Our Team</h2>
             <div class="container">
                 <article>
-                    <div class="profile">
+                    <div class="profile" id="p1">
                         <div class="overly">
                             <h3>
                                 Aladdin Ahmed
@@ -63,41 +85,41 @@
                         </div>
                         <img id="personal" src="assets/Aladdin Ahmed.jpg">
                 </div>
-                <div class="profile">
+                <div class="profile" id="p2">
                     <div class="overly">
                         <h3>
-                            Aladdin Ahmed
+                            Abdelrahman Atito
                         </h3>
-                        <p>
+                        <!-- <p>
                             Team Leader
                         </p>
-                        <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a>
+                        <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a> -->
                     </div>
-                    <img id="personal" src="assets/Aladdin Ahmed.jpg">
+                    <img id="personal" src="assets/No PFP.png">
             </div>
-            <div class="profile">
+            <div class="profile" id="p3">
                 <div class="overly">
                     <h3>
-                        Aladdin Ahmed
+                        Ahmed Ayman
                     </h3>
-                    <p>
+                    <!-- <p>
                         Team Leader
-                    </p>
-                    <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a>
+                    </p> 
+                    <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a> -->
                 </div>
-                <img id="personal" src="assets/Aladdin Ahmed.jpg">
+                <img id="personal" src="assets/Ahmed Ayman.jpg">
         </div>
-        <div class="profile">
+        <div class="profile" id="p4">
                         <div class="overly">
                             <h3>
-                                Aladdin Ahmed
+                                Moaz Alaa
                             </h3>
-                            <p>
+                            <!-- <p>
                                 Team Leader
                             </p>
-                            <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a>
+                            <a href="https://www.linkedin.com/in/aladdin-ali-b1b769270/"><img src="assets/In-White-40.png"></a> -->
                         </div>
-                        <img id="personal" src="assets/Aladdin Ahmed.jpg">
+                        <img id="personal" src="assets/No PFP.png">
                 </div>
             </article>
         </div>
@@ -106,5 +128,7 @@
             &copy;2024 Intellisafe Living
         </footer>
     </main>
+    <script src="script.js">
+    </script>
 </body>
 </html>

@@ -5,42 +5,90 @@ body{
     color:#3d0066;
     font-size : 1.25rem;
     height:100vh;
+    box-sizing: border-box;
+    width:100vw;
+    overflow-x: hidden;
 }
 main{
     flex-grow:1;
+}
+.dropmenu{
+    box-sizing: border-box;
+    margin:5vw;
+    margin-top:0;
+    display:none;
+    background-color:#3d0066;
+    font-family:"Rubik", sans-serif;
+    overflow: hidden;
+    height:0;
+    transition: height 0.2s;
+    border-radius:10px;
+    font-size:1rem;
+        ul{
+            margin:0;
+            display: flex;
+            flex-flow:column;
+            padding:0;
+            a{
+                margin-top:10px;
+                text-decoration: none;
+                color:white;
+            }
+            li{
+                text-align:center;
+                display:block;
+            }
+        }
+}
+.dropmenu.open{
+    height:100px;
 }
 nav{
     display:grid;
     grid-template-columns:1fr 1.5fr;
     align-items:center;
+    justify-content:space-between;
     a{
         color:#3d0066;
         text-decoration: none;
     }
+    div{
+        display:flex;
+        flex-flow:row;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon{
+        font-size:2rem;
+        color: #3d0066;
+        display:none;
+        cursor: pointer;
+    }
+    ul{
+        height:fit-content;
+        display:flex;
+        justify-content:center;
+        width:fit-content;
+    }
+    ul a{
+       color:#3d0066;
+       font-weight:500;
+    }
+    ul li{
+        height:fit-content;
+        margin-left:5vw;
+        text-align:center;
+        display:inline-block;
+        font-family:"Rubik", sans-serif;
+    }
+    ul a:hover{
+        transition-duration:250ms;
+        color:#5c0099;
+    }
 }
-h1{
+h2{
     margin-left:5vw;
     font-family:GothamPro system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-ul{
-    height:fit-content;
-    display:flex;
-    justify-content:center;
-}
-ul a{
-   color:#3d0066;
-   font-weight:500;
-}
-ul li{
-    height:fit-content;
-    margin-left:5vw;
-    text-align:center;
-    display:inline-block;
-    font-family:"Rubik", sans-serif;
-}
-ul a:hover{
-    transition-duration:250ms;
-    color:#5c0099;
 }
 #s1{
     article{
@@ -59,11 +107,14 @@ ul a:hover{
         background-color:#5c0099;
         transition-duration:250ms;
     }
+    .fig{
+       width:40vw; 
+    }
 }
 .part{
     margin-left:5vw;
     margin-right:5vw;
-    h1{
+    h2{
         color:#3d0066;
         font-family:GothamPro system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size:4rem;
@@ -72,9 +123,8 @@ ul a:hover{
         margin-left:0;
     }
     .fig{
+        box-sizing: border-box;
         margin-top:10vh;
-        height:70vh;
-        margin-right:5vw;
     }
     p{
         margin-top:2vh;
@@ -89,13 +139,19 @@ ul a:hover{
     grid-template-columns:1fr 1fr;
     gap:10vw;
     .fig{
-        float:right;
+        box-sizing: border-box;
+        float:left;
         width:30vw;
+        height:auto;
     }
     article{
         display:flex;
         flex-flow:column;
         align-items:center;
+    }
+    #f1{
+        width:30vw;
+        height:auto;
     }
 }
 #s2{
@@ -107,36 +163,36 @@ ul a:hover{
         color:white;
         display:flex;
         flex-flow:row;
-        gap:2rem;
+        gap:2vw;
         border-collapse:separate;
-        border-radius:10rem;
+        border-radius:10vw;
         width:fit-content;
-        height:20rem;
+        height:20vw;
         background-image:linear-gradient(to right,#FDC500,#3d0066);
         /* overflow:hidden; */
         .profile{
             position:relative;
-            width:20rem;
+            width:20vw;
             margin-top:0;
             /* margin-bottom:2vh; */
             /* overflow:hidden; */
             display:flex;
             flex-flow:column;
             align-items:center;
-            padding-bottom:0.5vh;
+            /* padding-bottom:0.5vh; */
         }
         .overly{
-            padding:0.5rem;
+            padding:0.5vh;
             box-sizing: border-box;
             display:flex;
             align-items:center;
-            justify-content: end;
+            justify-content:flex-end;
             flex-flow:column;
             position:absolute;
             top:0;
             left:0;
-            width:20rem;
-            height:20rem;
+            width:20vw;
+            height:20vw;
             border-radius:50%;
             background-image:linear-gradient(to bottom,transparent 0 50%,black);
             font-size:1rem;
@@ -150,8 +206,16 @@ ul a:hover{
                 margin-bottom:0;
             }
             a img{
-                margin-top:1rem;
-                width:1.5rem;
+                margin-top:1vh;
+                width:1.5vw;
+            }
+        }
+        #p3, #p2, #p4{
+            .overly{
+
+                h3{
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
@@ -168,6 +232,7 @@ ul a:hover{
 }
 footer{
     font-family:"Rubik", sans-serif;
+    box-sizing: border-box;
     color:#3d0066;
     display:flex;
     flex-flow:column;
@@ -175,3 +240,73 @@ footer{
     width:100%;
     padding:1vh;
 }
+@media screen and (max-width:768px) {
+    .dropmenu{
+        display:block;
+    }
+    nav {
+        display:flex;
+        flex-flow:row;
+        padding-right:5vw;
+        h2{
+            font-size:larger;
+        }
+        ul{
+            display:none;
+        }
+        .icon{
+            display: block;
+        }
+    }
+    .part{
+        display:flex;
+        flex-flow:column;
+        text-wrap:wrap;
+        font-size:smaller;
+        h2{
+            font-size:2rem;
+        }
+        .fig{
+            align-self: center;
+            width:80vw;
+        }
+    }
+    #s1,#s2,#s3{
+        display:flex;
+        .fig, #f1{
+            width:80vw;
+        }
+    }
+    #s2{
+        article{
+            flex-flow:column;
+            justify-content: center;
+            height:fit-content;
+            width:50vw;
+            border-radius:25vw;
+            background-image:linear-gradient(to bottom,#FDC500,#3d0066);
+            .profile{
+                width:50vw;
+                height:50vw;
+            }
+            .overly{
+                width:50vw;
+                height:50vw;
+                justify-content:end;
+                font-size:small;
+                h3{
+                    font-size:1rem;
+                }
+                a img{
+                    width:5vw;
+                }
+                }
+            }
+        }
+        #personal{
+            width:50vw;
+        }
+        footer{
+            font-size:small;
+        }
+    }
